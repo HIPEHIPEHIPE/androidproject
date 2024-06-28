@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.content.SharedPreferences;
 
 public class MainActivity extends Activity {
 
@@ -39,8 +40,7 @@ public class MainActivity extends Activity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // MainActivity로 돌아가므로 특별한 작업은 필요 없습니다.
-                // 현재 이미 MainActivity이므로 아무 작업도 하지 않습니다.
+
             }
         });
 
@@ -71,6 +71,13 @@ public class MainActivity extends Activity {
             String name = data.getStringExtra("name");
             String age = data.getStringExtra("age");
             String phone = data.getStringExtra("phone");
+
+            SharedPreferences sharedPreferences = getSharedPreferences("MyCache", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("name", name);
+            editor.putString("age", age);
+            editor.putString("phone", phone);
+            editor.apply();
         }
     }
 }

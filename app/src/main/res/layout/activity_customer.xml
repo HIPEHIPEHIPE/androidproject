@@ -31,6 +31,19 @@
         android:inputType="phone"
         android:minHeight="48dp" />
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jamsillight"
+        android:text="친밀도"
+        android:textAlignment="center" />
+
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"

@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jamsilbold"
-        android:text="당신의 인맥은 비곤하군요.\n 사교성을 높여보세요"
+        android:text="당신의 인맥은 빈곤하군요.\n 사교성을 높여보세요"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
